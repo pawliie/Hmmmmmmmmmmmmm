@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace projekt
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            Console.WriteLine("Zadejte číslo v desítkové soustavě:");
+            int dec_cislo = int.Parse(Console.ReadLine());
+            int cislo_2;
+            string vysledek = string.Empty;   
+            while (dec_cislo > 0)
+                {
+                    cislo_2 = dec_cislo % 2;
+                    dec_cislo /= 2;
+                    vysledek = cislo_2.ToString() + vysledek;
+                }
+            Console.WriteLine("Binární: {0}", vysledek);
+            Console.ReadLine();
+                                                  
+        }
+    }
+}
